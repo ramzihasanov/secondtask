@@ -12,6 +12,29 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\manage\scss\navs\" />
+    <Folder Include="wwwroot\manage\scss\utilities\" />
+    <Folder Include="wwwroot\manage\vendor\bootstrap\js\" />
+    <Folder Include="wwwroot\manage\vendor\bootstrap\scss\mixins\" />
+    <Folder Include="wwwroot\manage\vendor\bootstrap\scss\utilities\" />
+    <Folder Include="wwwroot\manage\vendor\bootstrap\scss\vendor\" />
+    <Folder Include="wwwroot\manage\vendor\chart.js\" />
+    <Folder Include="wwwroot\manage\vendor\datatables\" />
+    <Folder Include="wwwroot\manage\vendor\fontawesome-free\css\" />
+    <Folder Include="wwwroot\manage\vendor\fontawesome-free\less\" />
+    <Folder Include="wwwroot\manage\vendor\fontawesome-free\metadata\" />
+    <Folder Include="wwwroot\manage\vendor\fontawesome-free\scss\" />
+    <Folder Include="wwwroot\manage\vendor\fontawesome-free\sprites\" />
+    <Folder Include="wwwroot\manage\vendor\fontawesome-free\svgs\brands\" />
+    <Folder Include="wwwroot\manage\vendor\fontawesome-free\svgs\regular\" />
+    <Folder Include="wwwroot\manage\vendor\fontawesome-free\svgs\solid\" />
+    <Folder Include="wwwroot\manage\vendor\fontawesome-free\webfonts\" />
+    <Folder Include="wwwroot\manage\vendor\jquery-easing\" />
+    <Folder Include="wwwroot\manage\vendor\jquery\" />
   </ItemGroup>
 
 </Project>

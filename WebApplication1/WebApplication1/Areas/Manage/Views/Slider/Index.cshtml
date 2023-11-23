@@ -1,0 +1,48 @@
+﻿@model List<Slider>
+@{
+    int counter = 0;
+}
+
+<div class="d-flex justify-content-between align-items-center container-fluid">
+    <h1>Slider</h1>
+    <div><a asp-action="create" asp-controller="slider" class="btn btn-primary">Create</a></div>
+</div>
+
+<div class="container-fluid">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Title1</th>
+                <th scope="col">Title2</th>
+                <th scope="col">Title3</th>
+                <th scope="col">Description</th>
+                <th scope="col">Image</th>
+                <th scope="col">RedirctUrl1</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var slider in Model)
+            {
+                counter++;
+                <tr>
+                    <td scope="row">@counter</td>
+                    <td>@slider.Title1</td>
+                    <td>@slider.Title2</td>
+                    <td>@slider.Title3</td>
+                    <td>@slider.Description</td>
+                    <td style="max-width:250px;"><img src="~/assets/images/@slider.Image" style="width:40%;" /></td>
+                    <td>@slider.RedirctUrl1</td>
+                    <td>
+                        <a asp-controller="slider" asp-action="update" asp-route-id="@slider.Id" class="btn btn-success">Update</a>
+                        <a asp-controller="slider" asp-action="delete" asp-route-id="@slider.Id" class="btn btn-danger">Delete</a>
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

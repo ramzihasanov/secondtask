@@ -1,0 +1,39 @@
+﻿@model Slider
+<div class="d-flex justify-content-between align-items-center container-fluid">
+    <h1>Update a silider</h1>
+</div>
+<div class="container-fluid">
+    <form method="post" class="row">
+        <div class="mb-3 col-md-4">
+            <label for="" class="form-label">Title</label>
+            <input asp-for="Title1" type="text" class="form-control">
+            <span asp-validation-for="Title1"></span>
+        </div>
+        <div class="mb-3 col-md-4">
+            <label for="" class="form-label">Title</label>
+            <input asp-for="Title2" type="text" class="form-control">
+            <span asp-validation-for="Title2"></span>
+        </div>
+        <div class="mb-3 col-md-4">
+            <label for="" class="form-label">Title</label>
+            <input asp-for="Title3" type="text" class="form-control">
+            <span asp-validation-for="Title3"></span>
+        </div>
+        <div class="mb-3 col-md-4">
+            <label for="" class="form-label">Desc</label>
+            <input asp-for="Description" type="text" class="form-control">
+            <span asp-validation-for="Description"></span>
+        </div>
+        <div class="mb-3 col-md-4">
+            <label for="" class="form-label">ImgUrl</label>
+            <input asp-for="Image" type="text" class="form-control">
+            <span asp-validation-for="Image" style=""></span>
+        </div>
+        <div class="mb-3 col-md-4">
+            <label for="" class="form-label">RedirUrl</label>
+            <input asp-for="RedirctUrl1" type="text" class="form-control">
+            <span asp-validation-for="RedirctUrl1" style=""></span>
+        </div>
+        <button style="width: 100px" type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>
