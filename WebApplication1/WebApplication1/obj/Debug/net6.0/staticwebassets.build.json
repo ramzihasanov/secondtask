@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "A1cFIG1yqX50xyvOoa0whAV97aBAhdj85PsdAB0Sdfc=",
+  "Hash": "iUGuCV3tqFxv+QzHCysucFqProD+1OMsGjTlVmjEPvs=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -1579,6 +1579,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\custom_banner.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ll novbe\\Desktop\\secondtask\\WebApplication1\\WebApplication1\\wwwroot\\assets\\images\\d4221331-bee4-42c4-b177-7868237ea067images (1).jfif",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ll novbe\\Desktop\\secondtask\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "assets/images/d4221331-bee4-42c4-b177-7868237ea067images (1).jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\d4221331-bee4-42c4-b177-7868237ea067images (1).jfif"
     },
     {
       "Identity": "C:\\Users\\ll novbe\\Desktop\\secondtask\\WebApplication1\\WebApplication1\\wwwroot\\assets\\images\\d75b7682-b81e-4d76-a877-aedabf20850aimages (1).jfif",

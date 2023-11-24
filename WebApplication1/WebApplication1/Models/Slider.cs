@@ -12,6 +12,6 @@ namespace WebApplication1.Models
         public string? Image{ get; set; }
         public string RedirctUrl1 { get; set; }
         [NotMapped]
-        public IFormFile formFile { get; set; }
+        public IFormFile? formFile { get; set; }
     }
 }

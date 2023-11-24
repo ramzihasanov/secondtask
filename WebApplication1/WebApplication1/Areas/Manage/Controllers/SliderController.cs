@@ -83,13 +83,49 @@ namespace WebApplication1.Areas.Manage.Controllers
             Slider existSlider = _context.Sliders.FirstOrDefault(x => x.Id == slider.Id);
 
             if (existSlider == null) return NotFound();
+            string oldFilePath = "C:\\Users\\ll novbe\\Desktop\\secondtask\\WebApplication1\\WebApplication1\\wwwroot\\assets\\images\\" + existSlider.Image;
+
+            if (slider.formFile != null)
+            {
+
+                string newFileName = slider.formFile.FileName;
+                if (slider.formFile.ContentType != "image/jpeg" && slider.formFile.ContentType != "image/png")
+                {
+                    ModelState.AddModelError("FormFile", "ancaq sekil yukle :)");
+                }
+
+                if (slider.formFile.Length > 1048576)
+                {
+                    ModelState.AddModelError("FormFile", "guce salma 1 mb az yukle");
+                }
+
+                if (slider.formFile.FileName.Length > 64)
+                {
+                    newFileName = newFileName.Substring(newFileName.Length - 64, 64);
+                }
+
+                newFileName = Guid.NewGuid().ToString() + newFileName;
+
+                string newFilePath = "C:\\Users\\ll novbe\\Desktop\\secondtask\\WebApplication1\\WebApplication1\\wwwroot\\assets\\images\\" + newFileName;
+                using (FileStream fileStream = new FileStream(newFilePath, FileMode.Create))
+                {
+                    slider.formFile.CopyTo(fileStream);
+                }
+
+                if (System.IO.File.Exists(oldFilePath))
+                {
+                    System.IO.File.Delete(oldFilePath);
+                }
+
+                existSlider.Image = newFileName;
+            }
 
             existSlider.Title1 = slider.Title1;
             existSlider.Title2 = slider.Title2;
             existSlider.Title3 = slider.Title3;
             existSlider.Description = slider.Description;
             existSlider.RedirctUrl1 = slider.RedirctUrl1;
-            existSlider.Image = slider.Image;
+  
 
             _context.SaveChanges();
 
@@ -113,6 +149,12 @@ namespace WebApplication1.Areas.Manage.Controllers
             if (existSilider == null)
             {
                 return NotFound();
+            }
+            string filePath = "C:\\Users\\ll novbe\\Desktop\\secondtask\\WebApplication1\\WebApplication1\\wwwroot\\assets\\images\\" + existSilider.Image;
+
+            if (System.IO.File.Exists(filePath))
+            {
+                System.IO.File.Delete(filePath);
             }
 
             _context.Sliders.Remove(existSilider);
